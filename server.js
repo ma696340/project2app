@@ -22,8 +22,13 @@ var routes = require("./controllers/recipesController");
 
 app.use(routes);
 
+var db = require("./models")
+
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+db.sequelize.sync().then(function(){
+  app.listen(PORT, function() {
+    // Log (server-side) when our server has started
+    console.log("Server listening on: http://localhost:" + PORT);
+  });
+  
+})

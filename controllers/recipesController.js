@@ -3,16 +3,18 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (recipes.js) to use its database functions.
-var recipe = require("../models/recipes");
+var db = require("../models");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
-  recipe.all(function (data) {
-    var hbsObject = {
-      recipe: data
-    };
+  db.Recipe.findAll({}).then(function(data){
+    res.render("index", {})
   });
 });
+
+router.get("/signup", function(req, res) {
+  res.render("signup",{})
+})
 
 router.post("/api/recipes", function (req, res) {
   recipe.create([

@@ -1,3 +1,83 @@
+var firebaseConfig = {
+  apiKey: "AIzaSyAK8WN8n8lZUlBY5Qv_8QzjNxEYE_TJYb0",
+  authDomain: "recipe-app-f7f1f.firebaseapp.com",
+  databaseURL: "https://recipe-app-f7f1f.firebaseio.com",
+  projectId: "recipe-app-f7f1f",
+  storageBucket: "recipe-app-f7f1f.appspot.com",
+  messagingSenderId: "688387737751",
+  appId: "1:688387737751:web:113f57152993257a2281d2"
+};
+​
+firebaseConfig.initializeApp(firebaseConfig);
+​
+var database = firebase.database();
+​
+// Button for signing up
+$("#signupBtn").on("click", function(event) {
+event.preventDefault();
+});
+​
+// Grabs user input
+var name = $("#name").val().trim();
+var email = $("#email").val().trim();
+var password = $("#password").val().trim();
+​
+//Creates local "temporary" object
+var newUser = {
+name: name,
+email: email,
+password: password
+};
+​
+​
+// Uploaded user data to the database
+database.ref().push(newUser);
+​
+// Logs everything into console
+console.log(newUser.name);
+console.log(newUser.email);
+console.log(newPassword.password);
+​
+alert("User successfully created");
+​
+// create Firebase event for adding new user
+database.ref().on("child_added", function(childSnapshot) {
+console.log(childSnapshot.val());
+​
+// Store everything into a variable
+var name = childSnapshot.val().name;
+var email = childSnapshot.val().email;
+var password = childSnapshot.val().password;
+​
+​
+// User Info
+console.log(name);
+console.log(email);
+​console.log(password);
+​
+​
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
