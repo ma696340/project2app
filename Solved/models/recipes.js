@@ -1,8 +1,8 @@
 var orm = require("../config/orm")
 
 var recipes = {
-    selectAll: function (cb) {
-        orm.selectAll("recipes", function (data) {
+    all: function (cb) {
+        orm.all("recipes", function (data) {
             cb(data)
         })
     },

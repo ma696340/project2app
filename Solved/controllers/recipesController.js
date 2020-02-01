@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (recipes.js) to use its database functions.
-var recipe = require("./models/recipes.js");
+var recipe = require("../models/recipes");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
