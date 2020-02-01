@@ -97,3 +97,32 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+$("#add-btn").on("click", function(event) {
+  event.preventDefault();
+
+  // Make a newBook object
+  var newRecipe = {
+    recipeName: $("#recipeName").val().trim(),
+    recipeIngredients: $("#recipeIngredients").val().trim(),
+    recipePrepTime: $("#prepTime").val().trim(),
+    recipeCookTime: $("#cookTime").val().trim(),
+    recipeInstructions: $("#recipeInstructions").val().trim()
+  };
+
+  // Send an AJAX POST-request with jQuery
+  $.post("/api/new", newBook)
+    // On success, run the following code
+    .then(function(data) {
+      // Log the data we found
+      console.log(data);
+    });
+
+  // Empty each input box by replacing the value with an empty string
+  $("#recipeName").val("");
+  $("#recipeIngredients").val("");
+  $("#prepTime").val("");
+  $("#cookTime").val("");
+  $("#recipeInstructions").val("");
+
+});

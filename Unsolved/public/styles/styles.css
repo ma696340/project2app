@@ -1,3 +1,11 @@
 .list-group-item {
   line-height: 2.5;
 }
+body {
+  background-image: url(./images/93324.jpg);
+  min-width: max-content;
+}
+
+#body-image{
+  background-image: url(./images/logo-transparent2.png);
+}
