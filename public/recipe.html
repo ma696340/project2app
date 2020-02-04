@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe!</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <style>
+        body {
+            background: url(https://www.foodwise.com.au/wp-content/uploads/2012/08/Background_ChoppingBoard21.jpg) no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5em;
+            font-weight: bold;
+        }
+
+        .inner_main_menu {
+            margin: 0 auto;
+            width: 1170px;
+        }
+
+        .inner_main_menu ul {
+            margin: 0;
+            padding: 175px 0 0;
+            list-style: none;
+            text-align: right;
+        }
+
+        .inner_main_menu ul li {
+            float: none;
+            display: inline-block;
+        }
+
+        .inner_main_menu ul li:nth-child(1) {
+            float: left;
+        }
+
+        .inner_main_menu ul li:nth-child(2) {
+            float: left;
+        }
+
+        .inner_main_menu ul li:nth-child(3) {
+            float: left;
+        }
+
+        .inner_main_menu ul li a {
+            color: #262626;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+        }
+
+        .inner_main_menu ul li a:hover {
+            color: aqua;
+        }
+        #main_menu{ width: 100%; position:relative;}
+        .logo_area{ width: 300px; height: 300px; position: absolute;; left: 50%; top: -125px;content: ""; margin-left: -350px; text-align: center;}
+    </style>
+
+</head>
+
+<body>
+    <div id="main_menu">
+        <div class="logo_area">
+            <a href=""><img src="./assets/style/images/logo-transparent copy.png" alt=""></a>
+        </div>
+        <div class="inner_main_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="">Fridge</a></li>
+                <li><a href="">Nutrition</a></li>
+                <li><a href="">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <p class="cool-font" style="font-size: 30px;"> Recipe Name</p>
+              <input class="form-control" type="text" id="recipe_name" placeholder="Enter The Name Of The Recipe">
+              <br>
+              <p class="cool-font" style="font-size: 30px;">Recipe Ingredients</p>
+              <textarea class="form-control" rows="8" id="ingredients_box" placeholder="Enter The Ingredients Here"></textarea>
+              <br>
+              <p class="cool-font" style="font-size: 30px;">Recipe Prep Time</p>
+              <input class="form-control" type="text" id="prep_time" placeholder="Enter Prep Time For Recipe">
+              <br>
+              <p class="cool-font" style="font-size: 30px;">Recipe Cook Time</p>
+              <input class="form-control" type="text" id="cook_time" placeholder="Enter Cook Time For Recipe">
+              <br>
+              <p class="cool-font" style="font-size: 30px;">Recipe Instructions</p>
+              <textarea class="form-control" rows="8" id="recipe_instructions" placeholder="Enter The Recipe Instructions"></textarea>
+              <br>
+              <button id="recipe_submit" class="btn btn-lg pull-right">Submit!</button>
+            </div>
+          </div>
+  
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h2>Recipes</h2>
+            <hr>
+            <div id="recipes_area"></div>
+          </div>
+        </div>
+  
+      </div>
+  
+
+
+
+
+
+
+      <script type="text/javascript" src="./js/recipe.js"></script>
+    </body>
+
+</body>
+</html>
+
+
+
+
+
